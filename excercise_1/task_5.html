@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./task_5.css">
+    <title>Form</title>
+</head>
+<body>
+    <form id="register-form" action="/">
+        <h3>Rejestracja nowego konta</h3>
+        <div class="fields">
+            <label for="name">Imię:</label>
+            <input placeholder="Imię" type="text" id="name" name="name">
+
+            <label for="surname">Nazwisko: </label>
+            <input placeholder="Nazwisko" type="text" id="surname" name="surname">
+            
+            <label for="telephone">Telefon:</label>
+            <input placeholder="Telefon" type="text" id="telephone" name="telephone">
+
+            <label for="postcode">Kod:</label>
+            <input placeholder="Kod" type="text" id="postcode" name="postcode">
+            
+            <label for="city">Miasto:</label>
+            <input placeholder="Miasto" type="text" id="city" name="city">
+
+            <label for="adress">Adres:</label>
+            <input placeholder="Adres" type="text" id="address" name="street">
+
+            <label for="mail">e-mail:</label>
+            <input placeholder="Adres e-mail" type="text" id="mail" name="mail">
+
+            <label for="password">Hasło:</label>
+            <input placeholder="Hasło" type="password" id="password" name="password">
+
+            <label for="repeatPassword">Powtórz hasło:</label>
+            <input placeholder="Powtórz hasło" type="password" id="repeatPassword" name="repeatPassword">
+
+            <div class="checkbox-container">
+                <input type="checkbox" name="agree">
+                <label for="agree">
+                    Zapoznałem się z treścią &nbsp;
+                    <a href="/excercise_1/task_5.html">regulaminu sklepu internetowego</a>
+                </label>
+            </div>
+
+            <div class="submit-container">
+                <button type="submit">Register</button>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

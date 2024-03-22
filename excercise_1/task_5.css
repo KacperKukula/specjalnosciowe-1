@@ -1,0 +1,91 @@
+:root {
+    font-size: 12px;
+    font-family: 'Arial', sans-serif;
+
+    --primary-color: #00857E;
+
+    --primary-text-color: #1d1d1d;
+    --secondary-text-color: #7e7e7e;
+}
+
+a, a:visited, a:hover, a:active {
+    color: var(--primary-color);
+    display: inline;
+}
+
+h3 {
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: #828282;
+    margin-bottom: 12px;
+}
+
+#register-form {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    width: clamp(400px, 80%, 1200px);
+    height: 100%;
+}
+
+.fields {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 8fr;
+    row-gap: .8rem;
+    font-weight: 600;
+
+    label {
+        display: flex;
+        align-items: center;
+        color: var(--primary-text-color);
+        font-size: 1rem;
+    }
+
+    input {
+        padding: 8px;
+        border-radius: 2px;
+        border: 1px solid #d5d5d5;
+        font-size: 1rem;
+    }
+
+    .checkbox-container {
+        grid-column: 2;
+        display: flex;
+        gap: 6px;
+
+        label {
+            color: var(--secondary-text-color);
+            white-space: nowrap;
+            letter-spacing: .03rem;
+            font-weight: 300;
+            font-size: .7rem;
+        }
+
+        input[type="checkbox"] {
+            border-color: var(--primary-color);
+        }
+
+        input[type="checkbox"]:checked {
+            background-color: var(--primary-color);
+        }
+    }
+
+    .submit-container {
+        grid-column: 2;
+        text-align: right;
+
+        button {
+            display: inline-block;
+            padding: 8px 16px;
+            border-radius: 2px;
+            border: none;
+            background-color: var(--primary-color);
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+    }
+}

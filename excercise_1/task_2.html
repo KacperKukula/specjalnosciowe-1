@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2</title>
+
+    <style>
+        *:not(span) {
+            padding: 12px;
+            border: 1px solid black;
+        }
+
+        body {
+            border: 1px solid black;
+            text-align: center;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 6px;
+            grid-template-areas:
+                ".           text      ."    
+                "header     header      header"
+                "section1  section2    section2"
+                "footer     footer      footer";
+        }
+
+        span {
+            grid-area: text;
+        }
+
+        header {
+            background-color: lightblue;
+            grid-area: header;
+
+            nav {
+                background-color: lightgreen;
+            }
+        }
+
+        section#sec_1 {
+            background-color: lightcoral;
+            grid-area: section1;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+
+            nav {
+                background-color: rgb(142, 142, 142);
+                min-height: 330px;
+            }
+            
+            aside {
+                background-color: lightyellow;
+                min-height: 160px;
+            }
+        }
+
+        section#sec_2 {
+            grid-area: section2;
+            
+            background-color: lightpink;
+            display: flex;
+            justify-content: space-between;
+            gap: 18px;
+            flex-direction: column;
+
+            article {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-gap: 6px;
+                background-color: lightsalmon;
+                grid-template-areas: 
+                    ".      heading    ."
+                    "header header header"
+                    "div    div    aside"
+                    "p       p      p";
+
+                span { grid-area: heading; }
+                header { 
+                    grid-area: header;
+                    background-color: violet;
+                }
+                div {
+                    grid-area: div;
+                    background-color: lightcoral;
+                }
+                aside {
+                    grid-area: aside;
+                    background-color: lightyellow;
+                }
+                p {
+                    grid-area: p;
+                    background-color: lightgreen;
+                }
+            }
+            footer {
+                background-color: lightblue;
+            }
+        }
+        footer {
+            grid-area: footer;
+            background-color: lightgray;
+        }
+    </style>
+
+</head>
+<body>
+    <span>body</span>
+    <header>
+        header
+        <nav>
+            nav
+        </nav>
+    </header>
+
+    <section id="sec_1">
+        section
+        <nav>
+            nav
+        </nav>
+        <aside>
+            aside
+        </aside>
+    </section>
+
+    <section id="sec_2">
+        section
+        <header>header</header>
+
+        <article>
+            <span>article</span>
+            <header>header</header>
+            <div>
+                div
+            </div>
+            <aside>
+                aside
+            </aside>
+            <p>p</p>
+        </article>
+
+        <article>
+            <span>article</span>
+            <header>header</header>
+            <div>
+                div
+            </div>
+            <aside>
+                aside
+            </aside>
+            <p>p</p>
+        </article>
+
+        <footer>
+            footer
+        </footer>
+    </section>
+    <footer>
+        footer
+    </footer>
+</body>
+</html>

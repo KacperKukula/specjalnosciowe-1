@@ -1,0 +1,30 @@
+:root {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--primary-text-color);
+    margin-bottom: 12px;
+
+    padding: 1rem;
+    color: aliceblue;
+    background-color: #00857E;
+}
+
+iframe {
+    width: 80%;
+    min-height: 400px;
+    resize: vertical;
+    border: 2px solid rgba(187, 187, 187, 0.267)
+}
+
+section {
+    margin: 0 auto;
+    width: clamp(300px, 80%, 800px);
+}
+
+iframe.frameSmall {
+    min-height: 300px;
+}
